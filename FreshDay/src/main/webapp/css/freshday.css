@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/***************
+*   Header_style
+****************/
+div.header_menu {
+    width:1200px;
+    height:150px;
+}
+div.header_menu_list{
+    width:100%;
+}
+div.header_menu_list > ul {
+    margin:0 0 0 850px;
+    padding:0;
+}
+div.header_menu_list > ul > li {
+    display:inline-block;
+    margin: 0 0 0 20px;
+}
+div.header_menu_list > ul > li > a {
+    color:black;
+    text-decoration:none;
+    font-weight:bold;   
+}
+div.header_menu_list > ul > li > a:hover {
+    color:red; 
+}
+div.header_menu_logo > h1 {
+    position:absolute;
+    font-size:70pt;
+    color:white;
+    letter-spacing:3px;
+    top:-40px;
+}
+div.header_menu_logo > img {
+    width:100%;
+    height:100%;
+}
+
+/***************
+*   footer_style
+****************/
+div.footer {
+    width:1200px;
+    height:200px;
+}
+div.footer > h1,h2,h3 {
+    margin:0;
+    padding:0;
+    display:inline-block;
+    position:absolute;
+    color:white;
+}
+div.footer > img {
+    width:100%;
+    height:100%;
+}
+div.footer > h2 {
+    top:15px;
+    left:140px;
+}
+div.footer > h3.time {
+    top:50px;
+}
+div.footer > h3.name {
+    top:80px;
+}
+div.footer > h3.number {
+    top:110px;
+}
+div.footer > h3.address {
+    top:140px;
+}
+div.footer > h3.owner {
+    top:170px;
+}

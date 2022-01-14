@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content = "width=device-width", initial-scale="1">
 <title>footer</title>
-<link href="http://localhost:9000/2022_01_14_test/css/test.css" rel="stylesheet">
+<link href="http://localhost:9000/Freshday/css/freshday.css" rel="stylesheet">
 </head>
 <body>
     <footer>
