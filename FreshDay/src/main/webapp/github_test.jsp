@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1> 정지원 테스트</h1>
 
 </body>
 </html>
