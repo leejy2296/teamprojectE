@@ -1,48 +1,172 @@
 @charset "UTF-8";
 /***************
+*   common_style
+****************/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+   -webkit-appearance: none;
+}
+.btn_style{
+    font-size:10pt;
+    font-weight:700;
+    width:130px;
+    padding:10px 0;
+    background:#777;
+    color:white;
+    margin-right:10px;
+}
+.btn_style2{
+    font-size:10pt;
+    font-weight:700;
+    width:80px;
+    background:#888;
+    color:white;
+    padding:5px;
+    margin-left:20px;
+}
+.input1 {
+    display:inline;
+    width:180px;
+    height:20px;
+    font-size:10pt;
+}
+.input2 {
+    display:inline-block;
+    width:100px;
+    height:20px;
+}
+.input3 {
+	text-align:center;
+    display:inline-block;
+    width:100px;
+    height:20px;
+}
+.input4 {
+    display:inline-block;
+    width:300px;
+    height:20px;
+}
+/***************
+*   login_style
+****************/
+div.login_page {
+	width:1200px;
+	height:300px;
+}
+div.login_page > div.id > img {
+    display:inline-block;
+    position:absolute;
+    left:370px;
+    width:50px;
+    height:40px;
+}
+div.login_page > div.pass > img {
+	display:inline-block;
+	position:absolute;
+	left:370px;
+    width:40px;
+    height:40px;
+}
+div.login_page > div.id, div.pass {
+	padding:20px 0 20px 420px;
+}
+div.login_page > div.hyperlink {
+	left:50px;
+}
+div.login_page > h1 {
+	padding-left:550px;
+}
+div.login_page > div.id > input {
+	display:inline-block;
+	padding:10px 90px 10px 10px;
+}
+div.login_page > div.pass > input {
+    display:inline-block;
+    padding:10px 90px 10px 10px;
+}
+div.login_page > img {
+	padding:20px;
+}
+div.login_page > button {
+	background-color:#777;
+	font-size:18pt;
+	color:white;
+	font-weight:bold;
+	padding:30px 50px 30px 50px;
+	position:absolute;
+	left:720px;
+	top:275px;
+}
+div.login_page > div.hyperlink > ul {
+    margin:30px 0 0 450px;
+    padding:0;
+}
+div.login_page > div.hyperlink > ul > li {
+    display:inline-block;
+    margin: 0 0 0 20px;
+}
+div.login_page > div.hyperlink > ul > li > a {
+    color:#999;
+    text-decoration:none;
+    font-weight:bold;   
+}
+div.login_page > div.hyperlink > ul > li > a:hover {
+    color:black; 
+}
+div.login_page > div.id > span#iderror{
+	position:absolute;
+	top:310px;
+	left:425px;
+}
+div.login_page > div.pass > span#passerror{
+    position:absolute;
+    top:387px;
+    left:425px;
+}
+/***************
 *   Header_style
 ****************/
 div.header_menu {
-    width:1200px;
-    height:150px;
+	width:1200px;
+	height:150px;
 }
 div.header_menu_list{
-    width:100%;
+	width:100%;
 }
 div.header_menu_list > ul {
     margin:0 0 0 850px;
     padding:0;
 }
 div.header_menu_list > ul > li {
-    display:inline-block;
-    margin: 0 0 0 20px;
+	display:inline-block;
+	margin: 0 0 0 20px;
 }
 div.header_menu_list > ul > li > a {
     color:black;
     text-decoration:none;
-    font-weight:bold;   
+    font-weight:bold;	
 }
 div.header_menu_list > ul > li > a:hover {
     color:red; 
 }
 div.header_menu_logo > h1 {
-    position:absolute;
-    font-size:70pt;
-    color:white;
-    letter-spacing:3px;
-    top:-40px;
+	position:absolute;
+	font-size:70pt;
+	color:white;
+	letter-spacing:3px;
+	top:-40px;
 }
 div.header_menu_logo > img {
-    width:100%;
-    height:100%;
+	width:100%;
+	height:100%;
 }
 
 /***************
 *   footer_style
 ****************/
 div.footer {
-    width:1200px;
-    height:200px;
+	width:1200px;
+	height:200px;
 }
 div.footer > h1,h2,h3 {
     margin:0;
@@ -52,15 +176,15 @@ div.footer > h1,h2,h3 {
     color:white;
 }
 div.footer > img {
-    width:100%;
-    height:100%;
+	width:100%;
+	height:100%;
 }
 div.footer > h2 {
-    top:15px;
-    left:140px;
+	top:15px;
+	left:140px;
 }
 div.footer > h3.time {
-    top:50px;
+	top:50px;
 }
 div.footer > h3.name {
     top:80px;
@@ -73,4 +197,39 @@ div.footer > h3.address {
 }
 div.footer > h3.owner {
     top:170px;
+}
+/***************
+*   join_style
+****************/
+section.join {
+	width:1200px;
+	height:820px;
+	margin:auto;
+}
+section.join > form > ul > li > label {
+	color:#333;
+	font-size:10pt;
+	display:inline-block;
+	width:120px;
+	text-align:center;
+}
+section.join > form > ul > li {
+	list-style-type:none;
+	padding:15px 0 0 15px;
+}
+section.join > form > h5 {
+	padding-left:230px;
+	color:#666;
+	font-size:8pt;
+}
+section.join > form > h1 {
+    padding:50px 0 0 200px;
+    font-size:20pt;
+}
+section.join > form > ul > li > p.error {
+	display:block;
+    padding-left:130px;
+}
+ul.list-inline {
+	padding-left:140px;
 }

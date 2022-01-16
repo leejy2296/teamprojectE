@@ -21,7 +21,7 @@
                  </div>
             <div class="header_menu_logo">
                 <h1 class="logo_title">FRESH DAY</h1>
-                <img src="http://localhost:9000/2022_01_14_test/images/logo_color.png">
+                <img src="http://localhost:9000/FreshDay/images/logo_color.png">
             </div>
         </div>
     </header>
