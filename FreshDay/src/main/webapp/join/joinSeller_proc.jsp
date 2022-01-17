@@ -5,14 +5,15 @@
     <% request.setCharacterEncoding("utf-8"); %>
     <jsp:useBean id="vo" class="vo.UserVO"></jsp:useBean>
     <jsp:setProperty property="*" name="vo"/>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content = "width=device-width", initial-scale="1">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<%
+	UserDao dao = new UserDao();
+	int result = dao.seller_insert(vo);
+	
+	if(result == 1){
+	    System.out.println("회원가입 성공");
+	    response.sendRedirect("http://localhost:9000/FreshDay/login/login.jsp?join_result=succ");
+	}else{
+	    System.out.println("회원가입 실패");
+	    response.sendRedirect("http://localhost:9000/FreshDay/login/login.jsp?join_result=fail");
+	}
+%>

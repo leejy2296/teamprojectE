@@ -1,8 +1,7 @@
 package vo;
 
 public class UserVO {
-    String id, pass, name, eid, domain, add1, add2, jdate, udate;
-    int hp, sellno;
+    String hp1, hp2, hp3, id, pass, name, eid, domain, add1, add2, jdate, udate, snumber1, snumber2, snumber3;
     boolean usable, sellerchk;
 
     public String getId() {
@@ -77,20 +76,52 @@ public class UserVO {
         this.udate = udate;
     }
 
-    public int getHp() {
-        return hp;
+    public String getHp1() {
+        return hp1;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setHp1(String hp1) {
+        this.hp1 = hp1;
     }
 
-    public int getSellno() {
-        return sellno;
+    public String getHp2() {
+        return hp2;
     }
 
-    public void setSellno(int sellno) {
-        this.sellno = sellno;
+    public void setHp2(String hp2) {
+        this.hp2 = hp2;
+    }
+
+    public String getHp3() {
+        return hp3;
+    }
+
+    public void setHp3(String hp3) {
+        this.hp3 = hp3;
+    }
+
+    public String getSnumber1() {
+        return snumber1;
+    }
+
+    public void setSnumber1(String snumber1) {
+        this.snumber1 = snumber1;
+    }
+
+    public String getSnumber2() {
+        return snumber2;
+    }
+
+    public void setSnumber2(String snumber2) {
+        this.snumber2 = snumber2;
+    }
+
+    public String getSnumber3() {
+        return snumber3;
+    }
+
+    public void setSnumber3(String snumber3) {
+        this.snumber3 = snumber3;
     }
 
     public boolean isUsable() {

@@ -24,8 +24,7 @@
             <li>
                 <label>아이디 *</label>
                 <input type="text" name="id" class="form-control" id="id" placeholder="5~20자, 영어와 숫자" onblur="idCheck();wordCount_id(this,5,20);">
-                <button type="button" class="btn btn-secondary">중복확인</button>
-                <span class="btn_span" id="btn_span">중복확인 문구출력</span>
+                <button type="button" class="btn btn-secondary" onclick="id_sameCheck()">중복확인</button>
                 <p class="error" id="iderror"></p>
             </li>
             <li>
@@ -41,7 +40,7 @@
             <li>
                 <label>휴대폰 *</label>
                 <span>
-                      <input type="text" name="hp2" class="form-control" id="hp1" value="010" readonly/>
+                      <input type="text" name="hp1" class="form-control" id="hp1" value="010" readonly/>
                     - <input type="text" name="hp2" class="form-control" id="hp2" oninput="numberMax(this,4)" placeholder="4자리 숫자">
                     - <input type="text" name="hp3" class="form-control" id="hp3" onblur="hpCheck()" oninput="numberMax(this,4)" placeholder="4자리 숫자">
                 </span>
@@ -49,8 +48,8 @@
             </li>   
             <li>
                 <label>이메일 *</label>
-                <input type="text" name="email1" class="form-control" id="email1" placeholder="이메일을 입력해주세요"> @
-                <input type="text" name="email2" class="form-control" id="email2" onblur="eCheck()">
+                <input type="text" name="eid" class="form-control" id="email1" placeholder="이메일을 입력해주세요"> @
+                <input type="text" name="domain" class="form-control" id="email2" onblur="eCheck()">
                 <select class="form-select" id="email3" aria-label="Default select example" onchange="emailCheck()">
                     <option value="self">직접입력</option>
                     <option value="naver.com">네이버</option>
@@ -61,11 +60,11 @@
             </li>
             <li>
                 <label>주소 *</label>
-                <input type="text" name="addr1" class="form-control" id="addr1" onblur="addrCheck1()">
+                <input type="text" name="add1" class="form-control" id="addr1" onblur="addrCheck1()">
             </li>
             <li>
                 <label>상세주소 *</label>
-                <input type="text" name="addr2" class="form-control" id="addr2" onblur="addrCheck2()">
+                <input type="text" name="add2" class="form-control" id="addr2" onblur="addrCheck2()">
                 <p class="error" id="adr_error"></p>
             </li>
         </ul>
