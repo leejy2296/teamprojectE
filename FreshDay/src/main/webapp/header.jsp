@@ -13,8 +13,8 @@
         <div class="header_menu">
             <div class="header_menu_list">
                      <ul>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">LOGIN</a></li>
+                        <li><a href="http://localhost:9000/FreshDay/join/joinSelect.jsp" target="_parent">회원가입</a></li>
+                        <li><a href="http://localhost:9000/FreshDay/login/login.jsp" target="_parent">LOGIN</a></li>
                         <li><a href="">장바구니</a></li>
                         <li><a href="">MyPage</a></li>
                      </ul>

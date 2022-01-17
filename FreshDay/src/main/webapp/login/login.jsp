@@ -11,6 +11,7 @@
 </head>
 <body>
     <iframe src="http://localhost:9000/FreshDay/header.jsp"  scrolling="no" frameborder="0" width="100%" height="150px"></iframe>
+    <form name="loginForm" action="login_proc.jsp" method="post">
     <div class="login_page">
         <h1>로그인</h1>
         <div class="id">
@@ -26,12 +27,13 @@
         <button type="submit">로그인</button>
         <div class="hyperlink">
 	        <ul>
-	           <li><a href="">회원가입</a></li>
-	           <li><a href="">아이디 찾기</a></li>
-	           <li><a href="">비밀번호 찾기</a></li>
+	           <li><a href="http://localhost:9000/FreshDay/join/joinSelect.jsp" target="_parent">회원가입</a></li>
+	           <li><a href="http://localhost:9000/FreshDay/find/find_id.jsp" target="_parent">아이디 찾기</a></li>
+	           <li><a href="http://localhost:9000/FreshDay/find/find_pass.jsp" target="_parent">비밀번호 찾기</a></li>
 	        </ul>
         </div>
     </div>
+    </form>
     <iframe src="http://localhost:9000/FreshDay/footer.jsp"  scrolling="no" frameborder="0" width="100%" height="200px"></iframe>
 </body>
 </html>
