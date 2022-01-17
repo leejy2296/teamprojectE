@@ -244,3 +244,74 @@ function emailCheck(){
         email2.value = email3.value;
     }
 }   
+/**
+* 중복값 검사
+ */
+function id_sameCheck(){
+    let id;
+    id = document.getElementById("id");
+    if(id.value =="" || id.value.length < 5){
+        alert("아이디를 먼저 입력해주세요")
+        id.focus();
+    }else{
+        window.open("id_sameCheck.jsp?userid="+id.value,"","width=300, height=100");
+    }
+}
+function sell_sameCheck(){
+    let sell, sno1, sno2, sno3;
+    sno1 = document.getElementById("sellno1");
+    sno2 = document.getElementById("sellno2");
+    sno3 = document.getElementById("sellno3");
+    sell = sno1+sno2+sno3;
+    if(sno1.value =="" || sno2.value == "" || sno3.value == ""){
+        alert("사업자 등록 번호를 먼저 입력해주세요")
+        sno1.focus();
+    }else{
+        window.open("sno_sameCheck.jsp?sellnumber="+sell.value,"","width=300, height=100");
+    }
+}
+
+/**
+*   아이디 / 비밀번호 찾기
+ */
+ function find_id(){
+    let name, hp1, hp2, hp3;
+    name = document.getElementById("name");
+    hp1 = document.getElementById("hp1");
+    hp2 = document.getElementById("hp2");
+    hp3 = document.getElementById("hp3");
+
+    
+
+    if(name.value==""){
+        alert("이름을 입력해주세요.");
+        name.focus();
+    }else if(hp1.value == ""||hp2.value == ""||hp3.value == ""){
+        alert("핸드폰 번호를 입력해주세요.")
+    }else {
+        window.open("find_id_check.jsp?name="+name.value+"&"+"number="+hp1.value+hp2.value+hp3.value,"","width=300, height=100");
+    }
+   }
+function find_pass(){
+    let id, name, hp1, hp2, hp3;
+    id = document.getElementById("id");
+    name = document.getElementById("name");
+    hp1 = document.getElementById("hp1");
+    hp2 = document.getElementById("hp2");
+    hp3 = document.getElementById("hp3");
+
+    
+    if(id.value == ""){
+        alert("아이디를 입력해주세요.")
+        id.focus();
+    }else if(name.value==""){
+        alert("이름을 입력해주세요.");
+        name.focus();
+    }else if(hp1.value == ""||hp2.value == ""||hp3.value == ""){
+        alert("핸드폰 번호를 입력해주세요.")
+    }else {
+        window.open("find_pass_check.jsp?id="+id.value+"&name="+name.value+"&number="+hp1.value+hp2.value+hp3.value,"","width=300, height=100");
+    }
+   }
+    
+

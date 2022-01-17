@@ -271,6 +271,12 @@ div.join_select > a {
 /***********************
 * find
 ************************/
+div.idsamecheck > label {
+	margin:5px 0 10px 50px;
+}
+div.idsamecheck > input{
+	margin:5px 0 0 130px;
+}
 div.mb-3 {
 	width:800px;
 	margin-left:350px;
