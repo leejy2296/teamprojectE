@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.ArrayList;
+
 import vo.UserVO;
 
 public class UserDao extends DBConn {
@@ -91,7 +93,6 @@ public class UserDao extends DBConn {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(result);
         return result;
     }
 
@@ -170,8 +171,6 @@ public class UserDao extends DBConn {
             pstmt.setString(1, vo.getId());
             pstmt.setString(2, vo.getPass());
 
-            System.out.println(vo.getId());
-            System.out.println(vo.getPass());
             rs = pstmt.executeQuery();
             while (rs.next()) {
                 result = rs.getInt(1);
@@ -183,5 +182,35 @@ public class UserDao extends DBConn {
             e.printStackTrace();
         }
         return result;
+    }
+
+    /*
+     * 로그인정보 불러오기 (결제창용)
+     */
+    public ArrayList<UserVO> pay_select(String sid) {
+        ArrayList<UserVO> list = new ArrayList<UserVO>();
+        String sql = "select name,to_char(SUBSTRB(phone_number,1,3)), to_char(SUBSTRB(phone_number,4,4)), "
+                + " to_char(SUBSTRB(phone_number,8,4)), address1, address2 from freshday_user where id =?";
+        getPreparedStatement(sql);
+
+        try {
+            pstmt.setString(1, sid);
+
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                UserVO vo = new UserVO();
+                vo.setName(rs.getString(1));
+                vo.setHp1(rs.getString(2));
+                vo.setHp2(rs.getString(3));
+                vo.setHp3(rs.getString(4));
+                vo.setAdd1(rs.getString(5));
+                vo.setAdd2(rs.getString(6));
+
+                list.add(vo);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 }
