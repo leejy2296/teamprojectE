@@ -1,6 +1,6 @@
-/**
- * 공란 체크
- */
+ /**
+    회원가입 - 글자수제한 (커서 이동시 빨간글씨)
+  */
  function wordCount_id(el, minlength, maxlength){
     let idmsg;
     idmsg = document.getElementById("iderror");
@@ -11,6 +11,34 @@
         return false;
     }
 }
+function wordCount_pass(el, minlength, maxlength){
+    let passmsg;
+    passmsg = document.getElementById("passerror");
+    if(el.value != "" && el.value.length < minlength || el.value.length > maxlength){
+        passmsg.innerHTML = "6~12자리로 입력해주세요"
+        passmsg.style.color = "red";
+        passmsg.style.fontSize = "3pt";
+        return false;
+    }
+}
+function wordCount_name(el, minlength){
+    let namemsg;
+    namemsg = document.getElementById("nameerror");
+    if(el.value != "" && el.value.length < minlength){
+        namemsg.innerHTML = "2글자 이상 입력해주세요"
+        namemsg.style.color = "red";
+        namemsg.style.fontSize = "3pt";
+        return false;
+    }
+}
+function numberMax(el, maxlength){
+     if(el.value.length > maxlength)  {
+     el.value = el.value.substr(0, maxlength);
+  }
+}
+/**
+ * 회원가입 - 공란 체크 (커서 이동시 빨간글씨)
+ */
  function idCheck(){
     let id, idmsg;
     id = document.getElementById("id");
@@ -35,18 +63,6 @@
     }else {
         idmsg.innerHTML = "";
         return true
-    }
-
-}
-         
-function wordCount_pass(el, minlength, maxlength){
-    let passmsg;
-    passmsg = document.getElementById("passerror");
-    if(el.value != "" && el.value.length < minlength || el.value.length > maxlength){
-        passmsg.innerHTML = "6~12자리로 입력해주세요"
-        passmsg.style.color = "red";
-        passmsg.style.fontSize = "3pt";
-        return false;
     }
 }
 
@@ -74,16 +90,6 @@ function wordCount_pass(el, minlength, maxlength){
             return true;
         }
     } 
-function wordCount_name(el, minlength){
-    let namemsg;
-    namemsg = document.getElementById("nameerror");
-    if(el.value != "" && el.value.length < minlength){
-        namemsg.innerHTML = "2글자 이상 입력해주세요"
-        namemsg.style.color = "red";
-        namemsg.style.fontSize = "3pt";
-        return false;
-    }
-}
 
  function nameCheck(){
     let name, namemsg;
@@ -107,7 +113,7 @@ function wordCount_name(el, minlength){
         namemsg.style.fontSize = "3pt";
         return false;
     }
-    }
+  }
 
 function sellerCheck(){
     let no1,no2,no3,sellmsg;
@@ -135,11 +141,6 @@ function sellerCheck(){
         return false;
     }
 }
-function numberMax(el, maxlength){
-     if(el.value.length > maxlength)  {
-     el.value = el.value.substr(0, maxlength);
-  }
-}
 function hpCheck(){
     let hp1, hp2, hpmsg;
     hp1 = document.getElementById("hp2");
@@ -162,7 +163,30 @@ function hpCheck(){
         return false;
     }
 }    
-
+function cardCheck(){
+    let card1, card2, card3, card4, cardmsg;
+    card1 = document.getElementById("card1");
+    card2 = document.getElementById("card2");
+    card3 = document.getElementById("card3");
+    card4 = document.getElementById("card4");
+    cardmsg = document.getElementById("carderror");
+    
+    if(card1.value != "" && card2.value != "" && card3.value != "" && card4.value != ""){
+        if(card1.value.length != 4 || card2.value.length != 4 || card3.value.length != 4 || card4.value.length != 4){
+            cardmsg.innerHTML = "카드번호가 잘못되었습니다.";
+            cardmsg.style.color = "red";
+            cardmsg.style.fontSize = "3pt";
+            return false;
+        }
+        cardmsg.innerHTML = "";
+        return true;
+    }else {
+        cardmsg.innerHTML = "카드번호를 입력해주세요.";
+        cardmsg.style.color = "red";
+        cardmsg.style.fontSize = "3pt";
+        return false;
+    }
+}  
 function eCheck(){
     let email1, email2, emsg;
     email1 = document.getElementById("email1");
@@ -208,7 +232,82 @@ function addrCheck2(){
             addrmsg.style.fontSize = "3pt";
             return false;
         }       
-    }  
+    } 
+/*
+* 회원가입 - 버튼클릭 폼 체크
+*/ 
+function joinFormCheck(){
+    let name, id, pass, passchk, sellno1, sellno2, sellno3, hp2, hp3,
+    email1, email2, addr1, addr2;
+    name = document.getElementById("name");
+    id = document.getElementById("id");
+    pass = document.getElementById("password");
+    passchk = document.getElementById("passwordcheck");
+    sellno1 = document.getElementById("sellno1");
+    sellno2 = document.getElementById("sellno2");
+    sellno3 = document.getElementById("sellno3");
+    hp2 = document.getElementById("hp2");
+    hp3 = document.getElementById("hp3");
+    email1 = document.getElementById("email1");
+    email2 = document.getElementById("email2");
+    addr1 = document.getElementById("addr1");
+    addr2 = document.getElementById("addr2");
+    if(name.value == ""){
+        alert("이름을 입력해주세요.");
+        name.focus();
+        return false;
+    }else if(id.value == ""){
+        alert("아이디를 입력해주세요.");
+        id.focus();
+        return false;
+    }else if(pass.value == ""){
+        alert("비밀번호를 입력해주세요.");
+        pass.focus();
+        return false;
+    }else if(passchk.value == ""){
+        alert("비밀번호 확인을 입력해주세요.");
+        passchk.focus();
+        return false;
+    }else if(sellno1.value == ""){
+        alert("사업자번호 앞자리를 입력해주세요.");
+        sellno1.focus();
+        return false;
+    }else if(sellno2.value == ""){
+        alert("사업자번호 가운데자리를 입력해주세요.");
+        sellno2.focus();
+        return false;
+    }else if(sellno3.value == ""){
+        alert("사업자번호 뒷자리를 입력해주세요.");
+        sellno3.focus();
+        return false;
+    }else if(hp2.value == ""){
+        alert("휴대폰 가운데자리를 입력해주세요.");
+        hp2.focus();
+        return false;
+    }else if(hp3.value == ""){
+        alert("휴대폰 뒷자리를 입력해주세요.");
+        hp3.focus();
+        return false;
+    }else if(email1.value == ""){
+        alert("이메일 아이디를 입력해주세요.");
+        email1.focus();
+        return false;
+    }else if(email2.value == ""){
+        alert("도메인주소를 입력해주세요.");
+        email2.focus();
+        return false;
+    }else if(addr1.value == ""){
+        alert("주소를 입력해주세요.");
+        addr1.focus();
+        return false;
+    }else if(addr2.value == ""){
+        alert("상제주소를 입력해주세요.");
+        addr2.focus();
+        return false;
+    }else {
+        joinForm.submit();
+    }
+}
 /**
 *   비밀번호 확인 일치
 */
@@ -245,7 +344,7 @@ function emailCheck(){
     }
 }   
 /**
-* 중복값 검사
+* 중복버튼 > 중복값검사
  */
 function id_sameCheck(){
     let id;
@@ -263,7 +362,7 @@ function sell_sameCheck(){
     sno2 = document.getElementById("sellno2");
     sno3 = document.getElementById("sellno3");
     sell = sno1+sno2+sno3;
-    if(sno1.value =="" || sno2.value == "" || sno3.value == ""){
+    if(sno1.value ==""||sno1.value.length < 3 || sno2.value == "" || sno2.value.length < 2 || sno3.value == "" || sno3.value.length < 5){
         alert("사업자 등록 번호를 먼저 입력해주세요")
         sno1.focus();
     }else{
@@ -281,13 +380,14 @@ function sell_sameCheck(){
     hp2 = document.getElementById("hp2");
     hp3 = document.getElementById("hp3");
 
-    
-
     if(name.value==""){
         alert("이름을 입력해주세요.");
         name.focus();
+        return false;
     }else if(hp1.value == ""||hp2.value == ""||hp3.value == ""){
-        alert("핸드폰 번호를 입력해주세요.")
+        alert("핸드폰 번호를 입력해주세요.");
+        hp2.focus();
+        return false;
     }else {
         window.open("find_id_check.jsp?name="+name.value+"&"+"number="+hp1.value+hp2.value+hp3.value,"","width=300, height=100");
     }
@@ -304,14 +404,79 @@ function find_pass(){
     if(id.value == ""){
         alert("아이디를 입력해주세요.")
         id.focus();
+        return false;
     }else if(name.value==""){
         alert("이름을 입력해주세요.");
         name.focus();
+        return false;
     }else if(hp1.value == ""||hp2.value == ""||hp3.value == ""){
-        alert("핸드폰 번호를 입력해주세요.")
+        alert("핸드폰 번호를 입력해주세요.");
+        hp2.focus();
+        return false;
     }else {
         window.open("find_pass_check.jsp?id="+id.value+"&name="+name.value+"&number="+hp1.value+hp2.value+hp3.value,"","width=300, height=100");
     }
    }
+/**
+    로그인 폼 체크
+ */
+ function loginFormCheck(){
+    let id, pass;
+    id = document.getElementById("id");
+    pass = document.getElementById("password");
     
-
+    if(id.value == ""){
+        alert("아이디를 입력해주세요.");
+        id.focus();
+        return false;
+    }else if(pass.value == ""){
+        alert("비밀번호를 입력해주세요.");
+        pass.focus();
+        return false;
+    }else {
+        loginForm.submit();
+    }
+}
+/**
+    결제 폼 체크
+ */
+ function payFormCheck(){
+    let name, hp1, hp2, hp3, addr1, addr2, card1, card2, card3;
+    name = document.getElementById("name");
+    hp1 = document.getElementById("hp1");
+    hp2 = document.getElementById("hp2");
+    hp3 = document.getElementById("hp3");
+    addr1 = document.getElementById("addr1");
+    addr2 = document.getElementById("addr2");
+    card1 = document.getElementById("card1");
+    card2 = document.getElementById("card2");
+    card3 = document.getElementById("card3");
+    
+    if(name.value == ""){
+        alert("이름을 입력해주세요.");
+        name.focus();
+        return false;
+    }else if(hp1.value =="" || hp2.value == "" || hp3.value == ""){
+        alert("휴대폰번호를 입력해주세요.");
+        hp2.focus();
+        return false;
+    }else if(addr1.value ==""){
+        alert("주소를 입력해주세요.");
+        addr1.focus();
+        return false;
+    }else if(addr2.value==""){
+        alert("상세주소를 입력해주세요.");
+        addr2.focus();
+        return false;
+    }else if(addr2.value==""){
+        alert("상세주소를 입력해주세요.");
+        addr2.focus();
+        return false;
+    }else if(card1.value =="" || card2.value == "" || card3.value == ""){
+        alert("카드번호를 입력해주세요.");
+        card1.focus();
+        return false;
+    }else{        
+        payForm.submit();
+    }
+}

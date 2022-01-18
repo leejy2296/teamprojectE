@@ -10,10 +10,8 @@
 	int result = dao.seller_insert(vo);
 	
 	if(result == 1){
-	    System.out.println("회원가입 성공");
 	    response.sendRedirect("http://localhost:9000/FreshDay/login/login.jsp?join_result=succ");
 	}else{
-	    System.out.println("회원가입 실패");
 	    response.sendRedirect("http://localhost:9000/FreshDay/login/login.jsp?join_result=fail");
 	}
 %>

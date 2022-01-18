@@ -12,9 +12,9 @@
     if(result == 1){
         //로그인 성공---> id를 세션에 담아 브라우저에 전송
         session.setAttribute("sid", vo.getId());        
-        response.sendRedirect("http://localhost:9000/FreshDay/login/login.jsp?login_result=true");
+        response.sendRedirect("http://localhost:9000/FreshDay/main.jsp?login_result=true");
     }else{
-        response.sendRedirect("http://localhost:9000/FreshDay/login/login.jsp?login_result=fail");
+        response.sendRedirect("http://localhost:9000/FreshDay/main.jsp?login_result=fail");
     }
     
 %>

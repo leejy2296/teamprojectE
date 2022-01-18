@@ -12,6 +12,7 @@
 <title>회원가입 - 판매자</title>
 <link href="http://localhost:9000/FreshDay/css/freshday.css" rel="stylesheet">
 <link href="http://localhost:9000/FreshDay/css/bootstrap.css" rel="stylesheet">
+<script defer src="http://localhost:9000/FreshDay/js/freshday.js"></script>
 </head>
 <body>
 <iframe src="http://localhost:9000/FreshDay/header.jsp"  scrolling="no" frameborder="0" width="100%" height="150px"></iframe>
@@ -83,14 +84,13 @@
             </li>
         </ul>
             <ul class="list-inline">
-            <li class="list-inline-item"><button type="submit" class="btn btn-secondary">회원가입</button></li>
+            <li class="list-inline-item"><button type="button" class="btn btn-secondary" onclick="joinFormCheck()">회원가입</button></li>
             <li class="list-inline-item"><button type="reset" class="btn btn-secondary">다시쓰기</button></li>
             <li class="list-inline-item"><a href="http://localhost:9000/FreshDay/join/joinSelect.jsp" target="_parent"><button type="button" class="btn btn-secondary">이전화면</button></a></li>
             </ul>
      </form>
   </section>
 <iframe src="http://localhost:9000/FreshDay/footer.jsp"  scrolling="no" frameborder="0" width="100%" height="200px"></iframe>
-<script src="http://localhost:9000/FreshDay/js/freshday.js"></script>
 
 </body>
 </html>

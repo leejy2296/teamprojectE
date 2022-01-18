@@ -18,7 +18,7 @@
 <body>
 	<script>
 		alert("로그아웃이 완료되었습니다.");
-		location.href="http://localhost:9000/FreshDay/login/login.jsp";
+		location.href="http://localhost:9000/FreshDay/main.jsp";
 	</script>
 </body>
 </html>

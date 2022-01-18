@@ -74,15 +74,18 @@ div.login_page > div.hyperlink {
 	left:50px;
 }
 div.login_page > h1 {
+	font-weight:bold;
 	padding-left:550px;
 }
 div.login_page > div.id > input {
 	display:inline-block;
-	padding:10px 90px 10px 10px;
+	padding:10px 10px 10px 10px;
+	width:270px;
 }
 div.login_page > div.pass > input {
     display:inline-block;
-    padding:10px 90px 10px 10px;
+    padding:10px 10px 10px 10px;
+    width:270px;
 }
 div.login_page > img {
 	padding:20px;
@@ -95,7 +98,7 @@ div.login_page > button {
 	padding:30px 50px 30px 50px;
 	position:absolute;
 	left:720px;
-	top:275px;
+	top:245px;
 }
 div.login_page > div.hyperlink > ul {
     margin:30px 0 0 450px;
@@ -115,12 +118,12 @@ div.login_page > div.hyperlink > ul > li > a:hover {
 }
 div.login_page > div.id > span#iderror{
 	position:absolute;
-	top:310px;
+	top:280px;
 	left:425px;
 }
 div.login_page > div.pass > span#passerror{
     position:absolute;
-    top:387px;
+    top:367px;
     left:425px;
 }
 /***************
@@ -134,7 +137,8 @@ div.header_menu_list{
 	width:100%;
 }
 div.header_menu_list > ul {
-    margin:0 0 0 850px;
+	float:right;
+    margin:0;
     padding:0;
 }
 div.header_menu_list > ul > li {
@@ -142,12 +146,12 @@ div.header_menu_list > ul > li {
 	margin: 0 0 0 20px;
 }
 div.header_menu_list > ul > li > a {
-    color:black;
+    color:green;
     text-decoration:none;
     font-weight:bold;	
 }
 div.header_menu_list > ul > li > a:hover {
-    color:red; 
+    color:black; 
 }
 div.header_menu_logo > h1 {
 	position:absolute;
@@ -156,7 +160,7 @@ div.header_menu_logo > h1 {
 	letter-spacing:3px;
 	top:-40px;
 }
-div.header_menu_logo > img {
+div.header_menu_logo > a > img {
 	width:100%;
 	height:100%;
 }
@@ -299,4 +303,57 @@ div.mb-3 > p {
 }
 div.mb-3 > button {
 	margin: 50px 0 50px 250px;
+}
+
+/************************
+*   Pay
+*************************/
+section.pay {
+	width:1200px;
+}
+section.pay > div > hr {
+	width:100%;
+}
+section.pay > form > div.mb-3 {
+	margin-left:20px;
+	padding-bottom: 40px;
+	padding-top: 20px;
+}
+section.pay > form > div.hr {
+    margin-left:20px;
+}
+section.pay > form > div.hr > h4 {
+	font-size:20pt;
+    font-weight:bold;
+}
+section.pay > form > div.hr > h4 > small {
+    font-size: 12pt;
+}
+section.pay > form > div >  input#addr2 {
+	margin-left:105px;
+    width:750px;
+}
+section.pay > form > div >  input#addr1 {
+    width:500px;
+}
+section.pay > form > div:nth-child(7) > input {
+	width:105px;
+    display:inline-block;
+}
+section.pay > form > div:nth-child(7) > select {
+    width:200px;
+    display:inline-block;
+}
+section.pay > form > div:last-child {
+	width: 300px;
+	margin-left:950px;
+}
+section.pay > form > div:last-child > a > button {
+    width: 120px;
+}
+section.pay a {
+    text-decoration:none;
+}
+section.pay > form > div:nth-child(3) > input {
+    width:105px;
 }

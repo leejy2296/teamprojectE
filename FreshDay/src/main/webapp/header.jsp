@@ -19,8 +19,8 @@
                      <ul>
                         <li><a href="http://localhost:9000/FreshDay/join/joinSelect.jsp" target="_parent">회원가입</a></li>
                         <li><a href="http://localhost:9000/FreshDay/login/login.jsp" target="_parent">LOGIN</a></li>
-                        <li><a href="">장바구니</a></li>
-                        <li><a href="">MyPage</a></li>
+  <!--                  <li><a href="http://localhost:9000/FreshDay/login/login.jsp" target="_parent">장바구니</a></li>
+                        <li><a href="http://localhost:9000/FreshDay/login/login.jsp" target="_parent">MyPage</a></li> -->
                      </ul>
                  </div>
                  <% }else{ %>
@@ -36,7 +36,9 @@
                  <% } %>
             <div class="header_menu_logo">
                 <h1 class="logo_title">FRESH DAY</h1>
+              <a href = "http://localhost:9000/FreshDay/main.jsp" target= "_parent">
                 <img src="http://localhost:9000/FreshDay/images/logo_color.png">
+              </a>
             </div>
         </div>
     </header>

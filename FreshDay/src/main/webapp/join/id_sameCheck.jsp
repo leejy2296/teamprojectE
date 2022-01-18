@@ -24,7 +24,7 @@
         <link href="http://localhost:9000/FreshDay/css/bootstrap.css" rel="stylesheet">
         <script src="http://localhost:9000/FreshDay/js/freshday.js"></script> 
             <div class="idsamecheck">
-            <label class="form-label">중복된 아이디입니다.</label>
+            <label class="form-label">중복되거나 탈퇴한 아이디입니다.</label>
             <br>
             <input type="button" value="닫기" onclick="window.close()" class="btn btn-secondary">
             </div>

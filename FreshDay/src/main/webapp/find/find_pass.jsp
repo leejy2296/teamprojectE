@@ -8,6 +8,7 @@
 <title>비밀번호 찾기</title>
 <link href="http://localhost:9000/FreshDay/css/freshday.css" rel="stylesheet">
 <link href="http://localhost:9000/FreshDay/css/bootstrap.css" rel="stylesheet">
+<script defer src="http://localhost:9000/FreshDay/js/freshday.js"></script>
 </head>
 <body>
 <iframe src="http://localhost:9000/FreshDay/header.jsp"  scrolling="no" frameborder="0" width="100%" height="150px"></iframe>
@@ -33,6 +34,5 @@
 	</div>
 	</form>
 <iframe src="http://localhost:9000/FreshDay/footer.jsp"  scrolling="no" frameborder="0" width="100%" height="200px"></iframe>
-<script src="http://localhost:9000/FreshDay/js/freshday.js"></script>
 </body>
 </html>
